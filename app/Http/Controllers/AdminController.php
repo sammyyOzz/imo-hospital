@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\UsersExport;
 use App\User;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class AdminController extends Controller
 {
@@ -22,5 +24,10 @@ class AdminController extends Controller
         $users = User::all();
 
         return view('admin', compact('users'));
+    }
+
+    public function export()
+    {
+        return Excel::download(new UsersExport, 'users.xlsx');
     }
 }

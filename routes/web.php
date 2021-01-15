@@ -20,4 +20,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/admin-dashboard', 'AdminController@index')->name('admin');
+Route::get('/admin/export', 'AdminController@export')->name('export');
 
