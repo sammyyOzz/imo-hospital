@@ -9,6 +9,8 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
+
+//   ABORT 404 AFTER REGISTERING THE REQUIRED NUMBER OF ADMIN ACCOUNTS
 class RegisterController extends Controller
 {
     /*

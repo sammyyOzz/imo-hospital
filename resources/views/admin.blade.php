@@ -15,10 +15,37 @@
                     @endif
 
                     You are logged into the admin panel as {{ auth()->user()->name }}
+                    </h1>
                 </div>
 
-                <div id="example" name="Samuel Oziegbe" authname="{{ auth()->user()->name }}"></div>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                      </tr>
+                      <tr>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                      </tr>
+                      @foreach($users as $user)
+                        <tr>
+                            <td>{{ $user->name }}</td>
+                            <td>{{ $user->email }}</td>
+                        </tr>
+                      @endforeach
+                    </tbody>
+                  </table>
             </div>
+
+            <div id="example" name="Samuel Oziegbe" authname={{ auth()->user()->name }}></div>
+
         </div>
     </div>
 </div>

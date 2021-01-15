@@ -1,0 +1,30 @@
+.boxes {
+    margin: 20px;
+    margin-top: 150px;
+    background-color: aqua;
+    overflow: hidden;
+    height: 200px;
+    max-height: 35vh;
+    box-shadow: rgb(24, 26, 43);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.grids {
+    max-width: 50%;
+    margin: auto;
+}
+
+.sect {
+    display: flex;
+}
+
+.green {
+    background-color: green;
+    height: 200px;
+}
+
+.blue {
+    background-color: blue;
+    height: 200px;
+}
